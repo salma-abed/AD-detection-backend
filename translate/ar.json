@@ -1,0 +1,411 @@
+{
+  "error":{
+    "required":"{{field}} مطلوب",
+    "unique":"العنصر موجود بنفس القيمة لهذا العنصر {{field}}",
+    "alreadyExisted":"العنصر موجود بالفعل",
+    "verificationIncorrect":"التاكيد غير صحيح",
+    "userNotDefined":"المستخدم غير موجود",
+    "passwordIncorrect":"الرقم السري عير صحيح",
+    "emailIncorrect":"البريد الالكتروني غير صحيح",
+    "unAuthorization":"غير مسموح بالدخول",
+    "socialIncorrect":"الحساب الخاص بك علي فيسبوك او جوجل غير صحيح",
+    "latLongRequired":"نقاط الطول والعرض مطلوبه في حقل {{field}}",
+    "distanceZero":"لا يمكنك انشاء رحلة لان المسافة بين النقطتين بصفر",
+    "startError":"لا يمكنك انشاء اي رحلة لان الطلب لم يبدء بعد",
+    "notPaidCreate":"لا يمكنك انشاء اي رحلة قبل دفع الطلب",
+    "notPaidChangeStatus":"لا يمكنك اتخاذ هذا التعديل قبل دفع الطلب",
+    "maybeExpired":"{{field}} ربما يكون انتهي",
+    "couponExpired":"الكوبون منتهي الصلاحية",
+    "couponNotFound":"الكوبون غير موجود",
+    "notHaveEnoughPoints":"لا يوجد لديك نقاط كافية لانشاء الرحلة لديك {{leftPoints}} نقطة فقط بينما تحتاج لانشاء الرحلة {{consumptionPoints}} نقطة لان عدد الكيلومترات المتوقع استخدامها في هذه الرحلة هو {{consumptionKM}} كم وسعر الكيلومتر الواحد يساوي {{oneKMPoints}} نقطة ولكن يمكنك شراء باقة جديدة ومن ثم انشاء الرحلة",
+    "haveActiveTrips":"لا يمكنك انشاء رحلة لوجود عدد {{activatedTrips}} {{type}} نشطة",
+    "haveActiveTripsInRequest":"لا يمكنك اتخاذ هذا التعديل لوجود عدد {{activatedTrips}} {{type}} نشطة في هذا الطلب",
+    "youPaidThisRequestBefore":"لقد قمت بدفع هذا الطلب بالفعل",
+    "calculationError":"لديك مشكلة في تقسيم المبلغ",
+    "refundOverThanTotalPrice":"المبلغ المرتجع اكبر من السعر الكلي",
+    "refundMustBeLargerThanZero":"المبلغ المرتجع يجب ان يكون اكبر من صفر",
+    "createPaymentError":"لديك مشكلة عند انشاء عملية الدفع",
+    "notFound":"{{field}} غير موجود",
+    "getDistanceError":"حدثت مشكلة اثناء حساب المسافة بين النقطتين",
+    "canNotChangeNow":"لا يمكنك تغيير اي شئ الان",
+    "canNotStartRequestNow":"الا يمكنك بدء الطلب الان",
+    "canNotTakeThisActionNow":"لا يمكنك اتخاذ هذا التعديل الان",
+    "canNotEndRequestNow":"لا يمكنك انهاء الطلب الان",
+    "tripVerifyCodeRequired":"كود التحقق الذي تم إرساله الي العميل مطلوب",
+    "verifyCodeIncorrect":"كود التحقق غير صحيح",
+    "settingAlreadyExisted":"لقد انشئت اعدادات للتطبيق من قبل ولا يمكنك انشاء اكثر من اعدادات",
+    "phoneOrCountryIncorrect":"رقم الهاتف او الدولة غير صحيح",
+    "verifyCodeOrPhoneIncorrect":"كود التحقق او رقم الهاتف غير صحيح",
+    "alreadyHaveAccount":"لديك اكونت بالفعل",
+    "walletNotEnough":"المبلغ الموجود بالمحفظة اقل من قيمة طلب التحويل",
+    "placeOrOwnerIncorrect":"المكان او مالك المكان غير صحيح",
+    "accountDeleted":"الحساب الخاص بك تم حذفة قم بالتواصل مع الدعم لإعادة تنشيطة",
+    "changeAvailabilityError":"لا يمكنك تعديل الاوقات المتاحة بالنسبة لك لان لديك طلبات بالفعل في هذه الايام {{dates}} وللتعديل حسابك الشخصي قم بحذف هذه الايام من حسابك عند التعديل",
+    "fromDateMustLargerThanNow":"تاريخ البدء يجب ان يكون اكبر من او يساوي الوقت الحالي",
+    "toDateMustLargerThanFromDate":"تاريخ الانتهاء يجب ان يكون اكبر من تاريخ البدء",
+    "driverNotAvailable":"السائق غير متاح",
+    "youAreNotAvailableNow":"انت غير متاح",
+    "notDefined":"{{field}} غير موجود",
+    "atLeastOneDay":"يجب ان يكون ايام الطلب اكبر من او يساوي يوم واحد",
+    "walletNotEnoughToCreateRequest":"لا يوجد مال كافي في المحفظة الخاصة بك",
+    "requestRatedBefore":"تم تقييم الطلب من قبل",
+    "apiNotFound":"Api غير موجود"
+  },
+  "keys":{
+    "request":"الطلب",
+    "status":"الحالة",
+    "create":"انشاء",
+    "trip":"الرحلة",
+    "from_date":"تاريخ البدء",
+    "to_date":"تاريخ الإنتهاء"
+  },
+  "trip":{
+    "trip":"رحلة",
+    "trips":"رحلات",
+    "notifications":{
+      "createTrip":{
+        "title":"رحلة جديد",
+        "content":"{{user}} ({{userRole}}) أضاف رحلة رقم#{{tripNumber}} إلي الطلب رقم#{{requestNumber}} إليك {{verifyCodeContent}}"
+      },
+      "rejectTrip":{
+        "title":"رفض الرحلة",
+        "content":"{{user}} ({{userRole}}) قام برفض الرحلة رقم#{{tripNumber}} الموجودة في الطلب رقم#{{requestNumber}} وذلك بسبب '{{comment}}'"
+      },
+      "cancelTrip":{
+        "title":"إلغاء الرحلة",
+        "content":"{{user}} ({{userRole}}) قام بإلغاء الرحلة رقم#{{tripNumber}} الموجودة في الطلب رقم#{{requestNumber}} وذلك بسبب '{{comment}}'"
+      },
+      "endTrip":{
+        "title":"إنهاء الرحلة",
+        "content":"{{user}} ({{userRole}}) قام بإانهاء الرحلة رقم#{{tripNumber}} الموجودة في الطلب رقم#{{requestNumber}}"
+      },
+      "comingTrip":{
+        "title":"القدوم إلي موقع الرحلة",
+        "content":"{{user}} ({{userRole}}) سيآتي الي موقعك"
+      },
+      "arriveTrip":{
+        "title":"الوصول إلي موقع الرحلة",
+        "content":"{{user}} ({{userRole}}) آتي الي موقعك"
+      },
+      "startTrip":{
+        "title":"بدء الرحلة",
+        "content":"{{user}} ({{userRole}}) قام ببدء الرحلة رقم#{{tripNumber}} الموجودة في الطلب رقم#{{requestNumber}}"
+      },
+      "acceptTrip":{
+        "title":"الموافقة علي الرحلة",
+        "content":"{{user}} ({{userRole}}) قام بالموافقة علي الرحلة رقم#{{tripNumber}} الموجودة في الطلب رقم#{{requestNumber}}"
+      },
+      "tripOnMyWay":{
+        "title":"علي الطريق  إالي موقع الرحلة",
+        "content":"{{user}} ({{userRole}}) في الطريق إلي موقعك"
+      }
+      
+    },
+    "adminNotifications":{
+      "createTrip":{
+        "title":"رحلة جديد",
+        "content":"أحد المشرفين أضاف رحلة رقم#{{requestNumber}}إالي الطلب رقم#{{requestNumber}}  إليك"
+      },
+      "rejectTrip":{
+        "title":"رفض الرحلة",
+        "content":"أحد المشرفين قام برفض الرحلة رقم#{{requestNumber}}الموجودة في الطلب رقم#{{requestNumber}}  وذلك بسبب '{{comment}}'"
+      },
+      "cancelTrip":{
+        "title":"إلغاء الرحلة",
+        "content":"أحد المشرفين قام بإلغاء الرحلة رقم#{{requestNumber}}الموجودة في الطلب رقم#{{requestNumber}}  وذلك بسبب '{{comment}}'"
+      },
+      "endTrip":{
+        "title":"إنهاء الرحلة",
+        "content":"أحد المشرفين قام بإانهاء الرحلة رقم#{{requestNumber}}الموجودة في الطلب رقم#{{requestNumber}}" 
+      },
+      "comingTrip":{
+        "title":"القدوم إلي موقع الرحلة",
+        "content":"أحد المشرفين قام بتغير حالة الرحلة رقم#{{requestNumber}}الموجودة في الطلب رقم#{{requestNumber}}  لتكون حالتة حسنا سآتي"
+      },
+      "arriveTrip":{
+        "title":"الوصول إلي موقع الرحلة",
+        "content":"أحد المشرفين قام بتغير حالة الرحلة رقم#{{requestNumber}}الموجودة في الطلب رقم#{{requestNumber}}  لتكون حالتة لقد وصلت"
+      },
+      "startTrip":{
+        "title":"بدء الرحلة",
+        "content":"أحد المشرفين قام ببدء الرحلة رقم#{{requestNumber}}الموجودة في الطلب رقم#{{requestNumber}}" 
+      },
+      "acceptTrip":{
+        "title":"الموافقة علي الرحلة",
+        "content":"أحد المشرفين قام بالموافقة علي الرحلة رقم#{{requestNumber}}الموجودة في الطلب رقم#{{requestNumber}}" 
+      },
+      "tripOnMyWay":{
+        "title":"علي الطريق  إالي موقع الرحلة",
+        "content":"أحد المشرفين قام بتغير حالة الرحلة رقم#{{requestNumber}}الموجودة في الطلب رقم#{{requestNumber}}  لتكون حالتة في طريقي إليك"
+      }
+      
+    },
+    "reasons":{
+      "cancel":"إلغاء رحلة رقم#{{tripNumber}} ({{userRole}})",
+      "reject":"رفض رحلة رقم#{{tripNumber}} ({{userRole}})",
+      "end":"إكمال رحلة رقم#{{tripNumber}}"
+    },
+    "from":{
+      "driver":"وكود التأكيد هو {{verifyCode}}",
+      "client":""
+    }
+  },
+  "request":{
+    "request":"طلب",
+    "requests":"طلبات",
+    "notifications":{
+      "createRequest":{
+        "title":"طلب جديد",
+        "content":"{{user}} ({{userRole}}) أضاف طلب رقم#{{requestNumber}} إليك"
+      },
+      "rejectRequest":{
+        "title":"رفض الطلب",
+        "content":"{{user}} ({{userRole}}) قام برفض الطلب رقم#{{requestNumber}} وذلك بسبب '{{comment}}'"
+      },
+      "cancelRequest":{
+        "title":"إلغاء الطلب",
+        "content":"{{user}} ({{userRole}}) قام بإلغاء الرحلة رقم#{{requestNumber}} وذلك بسبب '{{comment}}'"
+      },
+      "automaticCancelRequest":{
+        "title":"إلغاء الطلب",
+        "content":"طلب#{{requestNumber}} تم الغاءه بشكل تلقائي وذلك بسبب انتهاء مدة الإنتظار المسموح بها"
+      },
+      "midPauseRequest":{
+        "title":"إلغاء الطلب",
+        "content":"{{user}} ({{userRole}}) قام بإلغاء الرحلة رقم#{{requestNumber}} بعد بدئها وذلك بسبب '{{comment}}'"
+      },
+      "endRequest":{
+        "title":"إنهاء الطلب",
+        "content":"{{user}} ({{userRole}}) قام بإانهاء الطلب رقم#{{requestNumber}}"
+      },
+      "comingRequest":{
+        "title":"القدوم إلي موقع الطلب",
+        "content":"{{user}} ({{userRole}}) سيآتي الي موقعك"
+      },
+      "arriveRequest":{
+        "title":"الوصول إلي موقع الطلب",
+        "content":"{{user}} ({{userRole}}) آتي الي موقعك"
+      },
+      "startRequest":{
+        "title":"بدء الطلب",
+        "content":"{{user}} ({{userRole}}) قام ببدء الطلب رقم#{{requestNumber}}"
+      },
+      "acceptRequest":{
+        "title":"الموافقة علي الطلب",
+        "content":"{{user}} ({{userRole}}) قام بالموافقة علي الطلب رقم#{{requestNumber}}"
+      },
+      "requestOnMyWay":{
+        "title":"علي الطريق  إالي موقع الطلب",
+        "content":"{{user}} ({{userRole}}) في الطريق إلي موقعك"
+      },
+      "requestPenalty":{
+        "title":"غرامة الطلب",
+        "content":"لقد تم توقيع غرامة عليك قدرها {{amount}} {{currency}} علي الطلب رقم#{{requestNumber}} وذلك بسبب {{reason}}"
+      },
+      "requestPaymentPaid":{
+        "title":"دفع الطلب",
+        "content":"تم دفع تكلفة الطلب رقم#{{requestNumber}} بنجاح"
+      },
+      "requestPaymentFailed":{
+        "title":"دفع الطلب",
+        "content":"حدث خطأ اثناء دفع تكلفة الطلب رقم#{{requestNumber}}"
+      },
+      "requestPaymentPending":{
+        "title":"دفع الطلب",
+        "content":"دفع تكلفة الطلب رقم#{{requestNumber}} قيد الإنتظار"
+      },
+      "requestPaymentPackagesPaid":{
+        "title":"دفع إضافة باقات إضافية للطلب",
+        "content":"تم دفع تكلفة إضافة باقات إضافية لطلب رقم#{{requestNumber}} بنجاح"
+      },
+      "requestPaymentPackagesFailed":{
+        "title":"دفع إضافة باقات إضافية للطلب",
+        "content":"حدث خطأ اثناء دفع تكلفة إضافة باقات إضافية لطلب رقم#{{requestNumber}}"
+      },
+      "requestPaymentPackagesPending":{
+        "title":"دفع إضافة باقات إضافية للطلب",
+        "content":"دفع تكلفة إضافة باقات إضافية لطلب رقم#{{requestNumber}} قيد الإنتظار"
+      },
+      "requestAddPackages":{
+        "title":"إضافة باقات إضافية إلي الطلب",
+        "content":"تم إضافة باقات إضافية إلي طلب رقم#{{requestNumber}} {{status}}"
+      },
+      "walletIncreased":{
+        "title":"أضافة إلي المحفظة",
+        "content":"تم إضافة مبلغ قدره {{amount}} {{currency}} إلي المحفظة الخاصة بك بنجاح وذلك بسبب {{reason}}"
+      },
+      "holdWalletIncreased":{
+        "title":"أضافة إلي المحفظة المعلقة",
+        "content":"تم إضافة مبلغ قدره {{amount}} {{currency}} إلي المحفظة الخاصة بك المعلفة بنجاح وذلك بسبب {{reason}}"
+      },
+      "walletDecreased":{
+        "title":"خصم من المحفظة",
+        "content":"تم إخذ مبلغ قدره {{amount}} {{currency}} من المحفظة الخاصة بك وذلك بسبب {{reason}}"
+      },
+      "holdWalletDecreased":{
+        "title":"خصم من المحفظة المعلقة",
+        "content":"تم إخذ مبلغ قدره {{amount}} {{currency}} من المحفظة المعلقة الخاصة بك وذلك بسبب {{reason}}"
+      },
+      "refundToWallet":{
+        "title":"إسترجاع إلي المحفظة",
+        "content":"لقد تم إستراجاع مبلغ قدره {{amount}} {{currency}} إلي المحفظة الخاصة بك وذلك بسبب {{reason}}"
+      }
+      
+    },
+    "adminNotifications":{
+      "createRequest":{
+        "title":"طلب جديد",
+        "content":"أحد المشرفين أضاف طلب رقم#{{requestNumber}} إليك"
+      },
+      "rejectRequest":{
+        "title":"رفض الطلب",
+        "content":"أحد المشرفين قام برفض الطلب رقم#{{requestNumber}} وذلك بسبب '{{comment}}'"
+      },
+      "cancelRequest":{
+        "title":"إلغاء الطلب",
+        "content":"أحد المشرفين قام بإلغاء الرحلة رقم#{{requestNumber}} وذلك بسبب '{{comment}}'"
+      },
+      "midPauseRequest":{
+        "title":"إلغاء الطلب",
+        "content":"أحد المشرفين قام بإلغاء الرحلة رقم#{{requestNumber}} بعد بدئها وذلك بسبب '{{comment}}'"
+      },
+      "endRequest":{
+        "title":"إنهاء الطلب",
+        "content":"أحد المشرفين قام بإانهاء الطلب رقم#{{requestNumber}}"
+      },
+      "comingRequest":{
+        "title":"القدوم إلي موقع الطلب",
+        "content":"أحد المشرفين قام بتغير حالة الطلب رقم#{{requestNumber}} لتكون حالتة حسنا سآتي"
+      },
+      "arriveRequest":{
+        "title":"الوصول إلي موقع الطلب",
+        "content":"أحد المشرفين قام بتغير حالة الطلب رقم#{{requestNumber}} لتكون حالتة لقد وصلت"
+      },
+      "startRequest":{
+        "title":"بدء الطلب",
+        "content":"أحد المشرفين قام ببدء الطلب رقم#{{requestNumber}}"
+      },
+      "acceptRequest":{
+        "title":"الموافقة علي الطلب",
+        "content":"أحد المشرفين قام بالموافقة علي الطلب رقم#{{requestNumber}}"
+      },
+      "requestOnMyWay":{
+        "title":"علي الطريق  إالي موقع الطلب",
+        "content":"أحد المشرفين قام بتغير حالة الطلب رقم#{{requestNumber}} لتكون حالتة في طريقي إليك"
+      },
+      "requestPenalty":{
+        "title":"غرامة الطلب",
+        "content":"لقد تم توقيع غرامة عليك قدرها {{amount}} {{currency}} علي الطلب رقم#{{requestNumber}} وذلك بسبب {{reason}}"
+      },
+      "requestPaymentPaid":{
+        "title":"دفع الطلب",
+        "content":"أحد المشرفين قام بدفع الطلب رقم#{{requestNumber}} بنجاح"
+      },
+      "requestPaymentFailed":{
+        "title":"دفع الطلب",
+        "content":"حدثت مشكلة اثناء قيام أحد المشرفين بدفع الطلب رقم#{{requestNumber}}"
+      },
+      "requestPaymentPending":{
+        "title":"دفع الطلب",
+        "content":"أحد المشرفين قام بجعل حالة الدفع للطلب رقم#{{requestNumber}} قيد الإنتظار"
+      },
+      "requestPaymentPackagesPaid":{
+        "title":"دفع إضافة باقات إضافية للطلب",
+        "content":"أحد المشرفين قام بدفع تكلفة إضافة باقات إضافية للطلب رقم#{{requestNumber}} بنجاح"
+      },
+      "requestPaymentPackagesFailed":{
+        "title":"دفع إضافة باقات إضافية للطلب",
+        "content":"حدثت مشكلة اثناء قيام أحد المشرفين بدفع تكلفة إضافة باقات إضافية للطلب رقم#{{requestNumber}}"
+      },
+      "requestPaymentPackagesPending":{
+        "title":"دفع إضافة باقات إضافية للطلب",
+        "content":"أحد المشرفين قام يجعل حالة دفع تكلفة إضافة باقات إضافية للطلب رقم#{{requestNumber}} قيد الإنتظار"
+      },
+      "requestAddPackages":{
+        "title":"إضافة باقات إضافية إلي الطلب",
+        "content":"تم إضافة باقات إضافية إلي طلب رقم#{{requestNumber}} {{status}}"
+      },
+      "walletIncreased":{
+        "title":"أضافة إلي المحفظة",
+        "content":"تم إضافة مبلغ قدره {{amount}} {{currency}} إلي المحفظة الخاصة بك بنجاح وذلك بسبب {{reason}}"
+      },
+      "holdWalletIncreased":{
+        "title":"أضافة إلي المحفظة المعلقة",
+        "content":"تم إضافة مبلغ قدره {{amount}} {{currency}} إلي المحفظة الخاصة بك المعلفة بنجاح وذلك بسبب {{reason}}"
+      },
+      "walletDecreased":{
+        "title":"خصم من المحفظة",
+        "content":"تم إخذ مبلغ قدره {{amount}} {{currency}} من المحفظة الخاصة بك وذلك بسبب {{reason}}"
+      },
+      "holdWalletDecreased":{
+        "title":"خصم من المحفظة المعلقة",
+        "content":"تم إخذ مبلغ قدره {{amount}} {{currency}} من المحفظة المعلقة الخاصة بك وذلك بسبب {{reason}}"
+      },
+      "refundToWallet":{
+        "title":"إسترجاع إلي المحفظة",
+        "content":"لقد تم إستراجاع مبلغ قدره {{amount}} {{currency}} إلي المحفظة الخاصة بك وذلك بسبب {{reason}}"
+      }
+      
+    },
+    "reasons":{
+      "cancel":"إلغاء طلب رقم#{{requestNumber}} ({{userRole}})",
+      "cancelWithPenalty":"إلغاء طلب رقم#{{requestNumber}} ({{userRole}}) في حالة غير مسموح بها",
+      "cancelAfterStart":"إلغاء طلب رقم#{{requestNumber}}  بعد بدءه ({{userRole}})",
+      "reject":"رفض طلب رقم#{{requestNumber}} ({{userRole}})",
+      "rejectWithPenalty":"رفض طلب رقم#{{requestNumber}} ({{userRole}}) في حالة غير مسموح بها",
+      "mid_pause":"إلغاء طلب رقم#{{requestNumber}} بعد البدء ({{userRole}})",
+      "end":"إكمال طلب رقم#{{requestNumber}}",
+      "createRequest":"إنشاء طلب رقم#{{requestNumber}}",
+      "addPackagesToRequest":"إضافة باقات إضافية إلي طلب رقم#{{requestNumber}}",
+      "refund":"لقد تم مراجعة طلب رقم#{{requestNumber}} وتم إسترجاع هذا المبلغ إلي المحفظة الخاصه بك",
+      "penalty":"لقد تم مراجعة طلب رقم#{{requestNumber}} وتم خصم هذا المبلغ من محفظتك"
+    },
+    "payment":{
+      "status":{
+        "paid":"بنجاح",
+        "failed":"بإخفاق",
+        "pending":"بإنتظار التاكيد"
+      }
+    }
+  },
+  "roles":{
+    "driver":"سائق",
+    "driver-and-guide":"سائق",
+    "client":"عميل",
+    "you":"أنت",
+    "user":"مشرف"
+  },
+  "rolesWithThe":{
+    "driver":"السائق",
+    "driver-and-guide":"السائق",
+    "client":"العميل",
+    "you":"أنت",
+    "user":"مشرف"
+  },
+  "fromRolesWithThe":{
+    "driver":"من خلال السائق",
+    "driver-and-guide":"من خلال السائق",
+    "client":"من خلال العميل",
+    "you":"من خلالك",
+    "user":"من خلال المشرف"
+  },
+  "fromWho":{
+    "you":"قمت",
+    "other":"قام"
+  },
+  "currency":{
+    "EGP":"جنية مصري"
+  },
+  "driver":{
+    "lackOfCommitment":{
+      "blocked":{
+        "title":"عدم الإلتزام",
+        "content":"لقد تم حظر الحساب الخاص بك وذلك بسبب ان نقاط عدم الإلتزام الخاصه بك هي {{points}} نقطة"
+      },
+      "increased":{
+        "title":"عدم الإلتزام",
+        "content":"تم زيادة نقاط عدم الإلتزام الخاصة بك {{points}} نقطة واصبحت نقاط عدم الإلتزام الإن {{currentPoints}} نقطة وسيتم حظر الحساب الخاص بك اذا وصلت نقاط عدم الإلتزام إلي 50 نقطة او أكثر"
+      }
+    }
+  }
+}

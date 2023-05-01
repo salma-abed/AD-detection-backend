@@ -1,0 +1,20 @@
+{
+          "_id": {
+              "$oid": "62c6fe6a0ecb35210c8fcc3f"
+          },
+          "email": "superadmin@ad-detection.com",
+          "password": "$2a$08$ZrTBhFNbejA5w.Eg9ZGow.8dlBwf3mNCOh0dXlv6tno9248M5cDCi",
+          "role": {
+              "$oid": "6102ef22c543fa4f5c1d5a98"
+          },
+          "name": "Ad Detection Super Admin",
+          "__v": 0,
+          "image": null,
+          "updatedAt": {
+              "$date": "2023-01-31T18:28:46.400Z"
+          },
+          "createdAt": {
+              "$date": "2021-09-13T13:24:14.887Z"
+          },
+          "status": true
+      }

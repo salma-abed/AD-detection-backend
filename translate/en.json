@@ -1,0 +1,418 @@
+{
+  "error":{
+    "required":"{{field}} is required",
+    "unique":"item with this {{field}} value already existed",
+    "alreadyExisted":"Item already Existed",
+    "verificationIncorrect":"Verification Incorrect",
+    "userNotDefined":"User is not defined",
+    "passwordIncorrect":"Password incorrect",
+    "emailIncorrect":"Email incorrect",
+    "unAuthorization":"un authorization",
+    "socialIncorrect":"Facebook or Google Account incorrect",
+    "latLongRequired":"{{field}} place latitude and longitude is required",
+    "distanceZero":"you can't create trip because KM between 2 points is 0",
+    "startError":"you can't create any trip before request start",
+    "notPaidCreate":"you can't create any trip before request paid successfully",
+    "notPaidChangeStatus":"you can't take this before payment success",
+    "maybeExpired":"{{field}} Maybe expired",
+    "couponExpired":"Coupon is expired",
+    "couponNotFound":"Coupon not found",
+    "notHaveEnoughPoints":"you don't have enough points you have {{leftPoints}} Points but trip need {{consumptionPoints}} Points because your trip KM is {{consumptionKM}} and one KM equal {{oneKMPoints}} Points but you can recharge your points",
+    "haveActiveTrips":"you can't create any trip because you have {{activatedTrips}} {{type}} active",
+    "haveActiveTripsInRequest":"you can't take this action because you have {{activatedTrips}} {{type}} active in this request",
+    "youPaidThisRequestBefore":"you paid this request before",
+    "calculationError":"calculation error",
+    "refundOverThanTotalPrice":"refund over than total price",
+    "refundMustBeLargerThanZero":"refund must be larger than 0",
+    "createPaymentError":"you have an error when create payment order",
+    "notFound":"{{field}} not found",
+    "getDistanceError":"we find error when get distance",
+    "canNotChangeNow":"you can't change anything now",
+    "canNotStartRequestNow":"you can't start request now",
+    "canNotTakeThisActionNow":"you can't take this action now",
+    "canNotEndRequestNow":"you can't end request now",
+    "tripVerifyCodeRequired":"verify code that we sent it to client is required",
+    "verifyCodeIncorrect":"verify code incorrect",
+    "settingAlreadyExisted":"you have already create setting you can only update now",
+    "phoneOrCountryIncorrect":"phone or country incorrect",
+    "verifyCodeOrPhoneIncorrect":"verify code or phone incorrect",
+    "alreadyHaveAccount":"Already have an account",
+    "walletNotEnough":"Wallet count is less than amount request",
+    "placeOrOwnerIncorrect":"place or owner incorrect",
+    "accountDeleted":"your account is deleted please contact support to reactive it",
+    "changeAvailabilityError":"you can't Change availability because you have requests in {{dates}}",
+    "fromDateMustLargerThanNow":"from date must larger than now",
+    "toDateMustLargerThanFromDate":"to date must larger than from date",
+    "driverNotAvailable":"driver is not available",
+    "youAreNotAvailableNow":"you are not available now",
+    "notDefined":"{{field}} is not defined",
+    "atLeastOneDay":"days must be at least one day",
+    "walletNotEnoughToCreateRequest":"you don't have enough money in your wallet",
+    "requestRatedBefore":"Request was rated before",
+    "apiNotFound":"Api Not Found"
+  },  
+  "keys":{
+    "request":"Request",
+    "status":"Status",
+    "create":"Create",
+    "trip":"Trip",
+    "from_date":"Start Date",
+    "to_date":"End Date"
+  },
+  "trip":{
+    "trip":"Trip",
+    "trips":"Trips",
+    "notifications":{
+      "createTrip":{
+        "title":"New Trip",
+        "content":"{{user}} ({{userRole}}) create Trip#{{tripNumber}} in Request#{{requestNumber}} For you {{verifyCodeContent}}"
+      },
+      "rejectTrip":{
+        "title":"Trip Rejection",
+        "content":"{{user}} ({{userRole}}) Reject Trip#{{tripNumber}} in Request#{{requestNumber}} and reason is '{{comment}}'"
+      },
+      "cancelTrip":{
+        "title":"Trip Cancelation",
+        "content":"{{user}} ({{userRole}}) Cancel Trip#{{tripNumber}} in Request#{{requestNumber}} and reason is '{{comment}}'"
+      },
+      "endTrip":{
+        "title":"Trip End",
+        "content":"{{user}} ({{userRole}}) End Trip#{{tripNumber}} in Request#{{requestNumber}}"
+      },
+      "comingTrip":{
+        "title":"Trip Coming",
+        "content":"{{user}} ({{userRole}}) Coming to your location"
+      },
+      "arriveTrip":{
+        "title":"Trip Arrive",
+        "content":"{{user}} ({{userRole}}) Arrived to your location"
+      },
+      "startTrip":{
+        "title":"Trip Start",
+        "content":"{{user}} ({{userRole}}) Start Trip#{{tripNumber}} in Request#{{requestNumber}}"
+      },
+      "acceptTrip":{
+        "title":"Trip Acceptation",
+        "content":"{{user}} ({{userRole}}) Accept Trip#{{tripNumber}} in Request#{{requestNumber}}"
+      },
+      "tripOnMyWay":{
+        "title":"Trip On the way",
+        "content":"{{user}} ({{userRole}}) On his way to your location"
+      }
+    },
+    "adminNotifications":{
+      "createTrip":{
+        "title":"New Trip",
+        "content":"An admin create Trip#{{tripNumber}} in Request#{{requestNumber}} For you"
+      },
+      "rejectTrip":{
+        "title":"Trip Rejection",
+        "content":"An admin Reject Trip#{{tripNumber}} in Request#{{requestNumber}} and reason is '{{comment}}'"
+      },
+      "cancelTrip":{
+        "title":"Trip Cancelation",
+        "content":"An admin Cancel Trip#{{tripNumber}} in Request#{{requestNumber}} and reason is '{{comment}}'"
+      },
+      "midPauseTrip":{
+        "title":"Trip Cancelation",
+        "content":"An admin Cancel Trip#{{tripNumber}} in Request#{{requestNumber}} after started it and reason is '{{comment}}'"
+      },
+      "endTrip":{
+        "title":"Trip End",
+        "content":"An admin End Trip#{{tripNumber}} in Request#{{requestNumber}}"
+      },
+      "comingTrip":{
+        "title":"Trip Coming",
+        "content":"An admin change status for Trip#{{tripNumber}} in Request#{{requestNumber}} to be coming"
+      },
+      "arriveTrip":{
+        "title":"Trip Arrive",
+        "content":"An admin change status for Trip#{{tripNumber}} in Request#{{requestNumber}} to be arrive"
+      },
+      "startTrip":{
+        "title":"Trip Start",
+        "content":"An admin Start Trip#{{tripNumber}} in Request#{{requestNumber}}"
+      },
+      "acceptTrip":{
+        "title":"Trip Acceptation",
+        "content":"An admin Accept Trip#{{tripNumber}} in Request#{{requestNumber}}"
+      },
+      "tripOnMyWay":{
+        "title":"Trip On the way",
+        "content":"An admin change status for Trip#{{tripNumber}} in Request#{{requestNumber}} to be on my way"
+      }
+      
+    },
+    "reasons":{
+      "cancel":"Cancel Trip#{{tripNumber}} in Request#{{requestNumber}} ({{userRole}})",
+      "reject":"Reject Trip#{{tripNumber}} in Request#{{requestNumber}} ({{userRole}})",
+      "end":"Complete Trip#{{tripNumber}} in Request#{{requestNumber}}"
+    },
+    "from":{
+      "driver":"and verify code is {{verifyCode}}",
+      "client":""
+    }
+  },
+  "userRole":{
+    "driver":"Driver",
+    "client":"Client"
+  },
+  "request":{
+    "request":"Request",
+    "requests":"Requests",
+    "notifications":{
+      "createRequest":{
+        "title":"New Request",
+        "content":"{{user}} ({{userRole}}) create Request#{{requestNumber}} For you"
+      },
+      "rejectRequest":{
+        "title":"Request Rejection",
+        "content":"{{user}} ({{userRole}}) Reject Request#{{requestNumber}} and reason is '{{comment}}'"
+      },
+      "cancelRequest":{
+        "title":"Request Cancelation",
+        "content":"{{user}} ({{userRole}}) Cancel Request#{{requestNumber}} and reason is '{{comment}}'"
+      },
+      "automaticCancelRequest":{
+        "title":"Request Cancelation",
+        "content":"Request#{{requestNumber}} was automatically canceled due to the expiry of the allowed waiting period"
+      },
+      "midPauseRequest":{
+        "title":"Request Cancelation",
+        "content":"{{user}} ({{userRole}}) Cancel Request#{{requestNumber}} after started it and reason is '{{comment}}'"
+      },
+      "endRequest":{
+        "title":"Request End",
+        "content":"{{user}} ({{userRole}}) End Request#{{requestNumber}}"
+      },
+      "comingRequest":{
+        "title":"Request Coming",
+        "content":"{{user}} ({{userRole}}) Coming to your location"
+      },
+      "arriveRequest":{
+        "title":"Request Arrive",
+        "content":"{{user}} ({{userRole}}) Arrived to your location"
+      },
+      "startRequest":{
+        "title":"Request Start",
+        "content":"{{user}} ({{userRole}}) Start Request#{{requestNumber}}"
+      },
+      "acceptRequest":{
+        "title":"Request Acceptation",
+        "content":"{{user}} ({{userRole}}) Accept Request#{{requestNumber}}"
+      },
+      "requestOnMyWay":{
+        "title":"Request On the way",
+        "content":"{{user}} ({{userRole}}) On his way to your location"
+      },
+      "requestPenalty":{
+        "title":"Request Penalty",
+        "content":"A penalty of {{amount}} {{currency}} has been imposed due to {{reason}} for in Request#{{requestNumber}}"
+      },
+      "requestPaymentPaid":{
+        "title":"Request Payment",
+        "content":"Request#{{requestNumber}} paid successfully"
+      },
+      "requestPaymentFailed":{
+        "title":"Request Payment",
+        "content":"Request#{{requestNumber}} paid failed"
+      },
+      "requestPaymentPending":{
+        "title":"Request Payment",
+        "content":"Request#{{requestNumber}} paid pending"
+      },
+      "requestPaymentPackagesPaid":{
+        "title":"Packages Payment",
+        "content":"Added packages cost for Request#{{requestNumber}} paid successfully"
+      },
+      "requestPaymentPackagesFailed":{
+        "title":"Packages Payment",
+        "content":"Added packages cost for Request#{{requestNumber}} paid failed"
+      },
+      "requestPaymentPackagesPending":{
+        "title":"Packages Payment",
+        "content":"Added packages cost for Request#{{requestNumber}} paid pending"
+      },
+      "requestAddPackages":{
+        "title":"Addition Packages To Request",
+        "content":"Request#{{requestNumber}} Added packages {{status}}"
+      },
+      "walletIncreased":{
+        "title":"Wallet Addition",
+        "content":"{{amount}} {{currency}} added to your wallet and this for {{reason}}"
+      },
+      "holdWalletIncreased":{
+        "title":"Hold Wallet Addition",
+        "content":"{{amount}} {{currency}} added to your hold wallet and this for {{reason}}"
+      },
+      "walletDecreased":{
+        "title":"Wallet Decreased",
+        "content":"{{amount}} {{currency}} decreased from your wallet and this for {{reason}}"
+      },
+      "holdWalletDecreased":{
+        "title":"Hold Wallet Decreased",
+        "content":"{{amount}} {{currency}} decreased from your hold wallet and this for {{reason}}"
+      },
+      "refundToWallet":{
+        "title":"Wallet Refund",
+        "content":"{{amount}} {{currency}} added to your wallet and this for {{reason}}"
+      }
+      
+    },
+    "adminNotifications":{
+      "createRequest":{
+        "title":"New Request",
+        "content":"An admin create Request#{{requestNumber}} For you"
+      },
+      "rejectRequest":{
+        "title":"Request Rejection",
+        "content":"An admin Reject Request#{{requestNumber}} and reason is '{{comment}}'"
+      },
+      "cancelRequest":{
+        "title":"Request Cancelation",
+        "content":"An admin Cancel Request#{{requestNumber}} and reason is '{{comment}}'"
+      },
+      "midPauseRequest":{
+        "title":"Request Cancelation",
+        "content":"An admin Cancel Request#{{requestNumber}} after started it and reason is '{{comment}}'"
+      },
+      "endRequest":{
+        "title":"Request End",
+        "content":"An admin End Request#{{requestNumber}}"
+      },
+      "comingRequest":{
+        "title":"Request Coming",
+        "content":"An admin change status for Request#{{requestNumber}} to be coming"
+      },
+      "arriveRequest":{
+        "title":"Request Arrive",
+        "content":"An admin change status for Request#{{requestNumber}} to be arrive"
+      },
+      "startRequest":{
+        "title":"Request Start",
+        "content":"An admin Start Request#{{requestNumber}}"
+      },
+      "acceptRequest":{
+        "title":"Request Acceptation",
+        "content":"An admin Accept Request#{{requestNumber}}"
+      },
+      "requestOnMyWay":{
+        "title":"Request On the way",
+        "content":"An admin change status for Request#{{requestNumber}} to be on my way"
+      },
+      "requestPenalty":{
+        "title":"Request Penalty",
+        "content":"A penalty of {{amount}} {{currency}} has been imposed due to {{reason}} for in Request#{{requestNumber}}"
+      },
+      "requestPaymentPaid":{
+        "title":"Request Payment",
+        "content":"An admin pay Request#{{requestNumber}} successfully"
+      },
+      "requestPaymentFailed":{
+        "title":"Request Payment",
+        "content":"There was a problem while an administrator pay Request#{{requestNumber}}"
+      },
+      "requestPaymentPending":{
+        "title":"Request Payment",
+        "content":"An admin change payment status for Request#{{requestNumber}} to be pending"
+      },
+      "requestPaymentPackagesPaid":{
+        "title":"Packages Payment",
+        "content":"An admin pay added packages cost for Request#{{requestNumber}} successfully"
+      },
+      "requestPaymentPackagesFailed":{
+        "title":"Packages Payment",
+        "content":"There was a problem while an administrator pay added packages cost for Request#{{requestNumber}}"
+      },
+      "requestPaymentPackagesPending":{
+        "title":"Packages Payment",
+        "content":"An admin change payment added packages cost status for Request#{{requestNumber}} to be pending"
+      },
+      "requestAddPackages":{
+        "title":"Addition Packages To Request",
+        "content":"Request#{{requestNumber}} Added packages {{status}}"
+      },
+      "walletIncreased":{
+        "title":"Wallet Addition",
+        "content":"{{amount}} {{currency}} added to your wallet and this for {{reason}}"
+      },
+      "holdWalletIncreased":{
+        "title":"Hold Wallet Addition",
+        "content":"{{amount}} {{currency}} added to your hold wallet and this for {{reason}}"
+      },
+      "walletDecreased":{
+        "title":"Wallet Decreased",
+        "content":"{{amount}} {{currency}} decreased from your wallet and this for {{reason}}"
+      },
+      "holdWalletDecreased":{
+        "title":"Hold Wallet Decreased",
+        "content":"{{amount}} {{currency}} decreased from your hold wallet and this for {{reason}}"
+      },
+      "refundToWallet":{
+        "title":"Wallet Refund",
+        "content":"{{amount}} {{currency}} added to your wallet and this for {{reason}}"
+      }
+      
+    },
+    "reasons":{
+      "cancel":"Cancel request#{{requestNumber}} ({{userRole}})",
+      "cancelWithPenalty":"Cancel request#{{requestNumber}} ({{userRole}}) in un allowed cause",
+      "cancelAfterStart":"Cancel request#{{requestNumber}} after started it ({{userRole}})",
+      "reject":"Reject request#{{requestNumber}} ({{userRole}})",
+      "rejectWithPenalty":"Reject request#{{requestNumber}} ({{userRole}}) in un allowed cause",
+      "mid_pause":"Cancel request#{{requestNumber}} after started ({{userRole}})",
+      "end":"Complete request#{{requestNumber}}",
+      "createRequest":"Create request#{{requestNumber}}",
+      "addPackagesToRequest":"Add packages to request#{{requestNumber}}",
+      "refund":"we review request#{{requestNumber}} and we refund this amount to your wallet",
+      "penalty":"we review request#{{requestNumber}} and we decreased this amount from your wallet"
+    },
+    "payment":{
+      "status":{
+        "paid":"Successfully",
+        "failed":"Failed",
+        "pending":"pending"
+      }
+    }
+  },
+  "roles":{
+    "driver":"Driver",
+    "driver-and-guide":"Driver & Guide",
+    "client":"Client",
+    "you":"You",
+    "user":"Admin"
+  },
+  "rolesWithThe":{
+    "driver":"Driver",
+    "driver-and-guide":"Driver",
+    "client":"Client",
+    "you":"You",
+    "user":"Admin"
+  },
+  "fromRolesWithThe":{
+    "driver":"from Driver",
+    "driver-and-guide":"from Driver",
+    "client":"from Client",
+    "you":"from You",
+    "user":"from Admin"
+  },  
+  "fromWho":{
+    "you":"",
+    "other":""
+  },
+  "currency":{
+    "EGP":"EGP"
+  },
+  "driver":{
+    "lackOfCommitment":{
+      "blocked":{
+        "title":"Lack Of Commitment",
+        "content":"your account is blocked because your lack of commitment points is {{points}} points"
+      },
+      "increased":{
+        "title":"Lack Of Commitment",
+        "content":"your lack of commitment increased {{points}} points and current lack of commitment points is {{currentPoints}} points if your lack of commitment points equal 50 or larger than 50 your account will blocked"
+      }
+    }
+  }
+}
